@@ -1,5 +1,8 @@
 # Modelagem de ameaças: identifique riscos na concepção do software
 
+![image](https://github.com/AndreCoutinhom/OWASP_threat_modeling_dynamics/assets/91290799/8b68549d-2b26-4f69-b1d4-ea7104a2894e)
+
+
 > OTT, Ben-Hur Santos. Modelagem de ameaças: identifique riscos na concepção do software. Alura, 2023.
 
 Este repositório serve para armazenar materiais didáticos do curso de *threat modeling* da Alura.
