@@ -18,6 +18,8 @@ Este repositório serve para armazenar materiais didáticos do curso de *threat 
 
 ---
 
+# Apresentação
+
 ## Termos recorrentes
 
 * CVE (Common Vulnerabilities and Exposures)
@@ -34,6 +36,8 @@ Este repositório serve para armazenar materiais didáticos do curso de *threat 
 ![image](https://github.com/AndreCoutinhom/OWASP_threat_modeling_dynamics/assets/91290799/9c61cb57-8489-47bc-8a2f-afdeb3571659)
 
 ---
+
+# Decompondo a aplicação
 
 ## Caderno de modelagem de ameaças
 
@@ -80,8 +84,40 @@ Este repositório serve para armazenar materiais didáticos do curso de *threat 
 
 ---
 
+* Todo ponto de entrada tem uma saída.
+* Pontos de saída são coisas que acontecem quando o usuário é bem ou mal-sucedido na tentativa de acessar um ponto de entrada.
+* É sempre bom para um modelador de ameaças que destaque os pontos onde existem variáveis, ou seja, dados que podem ser diferentes para cada usuário.
 
+## Exemplos de documentação de descrição de entrada e saída
 
+### Modelador com conhecimento técnico total
+![image](https://github.com/AndreCoutinhom/OWASP_threat_modeling_dynamics/assets/91290799/d42e088b-cfb5-41cd-8e4c-aae3855976f7)
+
+### Modelador com conhecimento técnico parcial
+![image](https://github.com/AndreCoutinhom/OWASP_threat_modeling_dynamics/assets/91290799/6ff35a79-7e40-4946-8a34-19a921c2e9aa)
+
+### Modelador sem nenhum conhecimento técnico
+![image](https://github.com/AndreCoutinhom/OWASP_threat_modeling_dynamics/assets/91290799/6eeb20f2-f70e-483e-a576-8ffcc8448d72)
+
+--- 
+
+> Toda informação valiosa que o atacante pode usar contra a empresa, chamamos de Ativo. Pode ser um dado palpável ou abstrato. Porém, o que é algo "palpável"? Pode ser uma base de dados, um acesso ao servidor ou aos documentos das pessoas. Isto é, são ativos físicos em que o valor está diretamente relacionado ao ativo.
+
+> Os ativos abstratos são os que estão relacionados à reputação da empresa - por alguma informação que pode impactar o negócio. Por exemplo, uma empresa que fabrica eletrônicos de ponta, se vazar algum documento de um produto que ainda será lançado, isso gera um impacto direto nas vendas e ações da empresa.
+
+## Tabela de controle de riscos de Ativos
+
+| ID | NOME | DESCRIÇÃO | NÍVEL DE CONFIANÇA
+|-------------|-------------|-------------|-------------|
+| O identificador único do ativo | O nome que nós vamos dar ao ativo | Um texto breve sobre o por aquele ativo ser relevante para o nosso negócio sistema | Para saber quem tem acesso direto às informações deste ativo |
+
+---
+
+* É importante mapear todos os níveis de confiança para entender todos os tipos de interação que podem ser feitos na aplicação.
+
+---
+
+# Determinar e categorizar as ameaças
 
 
 
