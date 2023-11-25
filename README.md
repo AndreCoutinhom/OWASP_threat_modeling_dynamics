@@ -59,7 +59,7 @@ Este repositório serve para armazenar materiais didáticos do curso de *threat 
 | 1 | Por onde a plataforma é acessada? 
 | 2 | Para onde vão as informações enviadas pelo usuário? |
 | 3 | Onde são salvos os dados enviados pelo usuário? |
-| 4 | Há outros tipos de dados salvos em outro servidor? Se sim qual? |
+| 4 | Há outros tipos de dados salvos em outro servidor? Se sim quais? |
 
 ---
 
