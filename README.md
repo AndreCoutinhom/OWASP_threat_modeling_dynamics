@@ -118,8 +118,82 @@ Este repositório serve para armazenar materiais didáticos do curso de *threat 
 ---
 
 # Determinar e categorizar as ameaças
+---
+> Nenhum sistema é totalmente livre de ameaças. Um sistema pode apenas estar seguro em determinados momentos.
+---
+## Threat Modeling Frameworks
 
+### STRIDE
 
+Criado por Koren Kohnfelder e Praerit Garg para classificar os tipos de ameaças à segurança.
 
+|  | AMEAÇA | CONTROLE | 
+|-------------|-------------|-------------|
+| S | Spoofing | Authentication | 
+| T | Tampering | Integrity |
+| R | Repudiation | Non-Repudiation |
+| I | Information Disclosure | Confidentiality |
+| D | Denial of Service | Availability |
+| E | Elevation of Privilage | Authorization |
 
+---
 
+### DREAD
+
+Para calcular os níveis das possíveis ameaças.
+
+|  | CRITÉRIO | 
+|-------------|-------------|
+| D | Damage | Authentication | 
+| R | Reproducibility |
+| E | Exploitability |
+| A | Affected users |
+| D | Discoverability |
+
+---
+
+### Níveis para cada critério
+---
+![image](https://github.com/AndreCoutinhom/OWASP_threat_modeling_dynamics/assets/91290799/e3b6a489-f6af-4076-bb84-9c51219224d5)
+
+---
+
+![image](https://github.com/AndreCoutinhom/OWASP_threat_modeling_dynamics/assets/91290799/116229d7-02e3-474f-9a7d-676cfc390fcc)
+
+---
+
+![image](https://github.com/AndreCoutinhom/OWASP_threat_modeling_dynamics/assets/91290799/f3f3c575-75fd-4b66-99a6-295932fc5f35)
+
+---
+
+![image](https://github.com/AndreCoutinhom/OWASP_threat_modeling_dynamics/assets/91290799/3c082653-e15a-4457-8d05-a92ca6d1cfa9)
+
+---
+
+![image](https://github.com/AndreCoutinhom/OWASP_threat_modeling_dynamics/assets/91290799/c1835d82-285c-485f-b8fe-1dd38cec4b93)
+
+---
+
+## CVSS
+
+![image](https://github.com/AndreCoutinhom/OWASP_threat_modeling_dynamics/assets/91290799/717b6e42-ab8b-45b8-8a86-e3ab43289163)
+
+---
+
+### [Mais sobre DREAD](https://www.eccouncil.org/cybersecurity-exchange/threat-intelligence/dread-threat-modeling-intro/)
+
+---
+
+## Modelo de risco qualitativo 
+
+> Nesse método se fazem perguntas importantes sobre as portas de entrada e os níveis de ameaça de forma que se tenha uma ideia relfexiva e personalizada em relação às possíveis ações do atacante.
+
+> Isso é muito útil se nem todas as métricas pelo framework DREAD puderem ser solucionadas.
+
+---
+
+### Dicas em geral
+
+* Vazaram dados dos usuários ou sigilosos? Corrija agora.
+* O atacante consegue acesso aos sistemas? Corrija agora.
+* O atacante consegue tirar os sistemas do ar? Corrija agora.
