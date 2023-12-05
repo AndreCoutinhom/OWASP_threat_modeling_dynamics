@@ -56,6 +56,8 @@ Este repositório serve para armazenar materiais didáticos do curso de *threat 
 
 ---
 
+Acesse [aqui](Scripts%20úteis%20de%20exemplo/byte_limit.py) um exemplo de script para reduzir os efeitos de DOS.
+
 ## Tabela de dependências externas
 
 | ID | DESCRIÇÃO | 
