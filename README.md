@@ -197,3 +197,120 @@ Para calcular os níveis das possíveis ameaças.
 * Vazaram dados dos usuários ou sigilosos? Corrija agora.
 * O atacante consegue acesso aos sistemas? Corrija agora.
 * O atacante consegue tirar os sistemas do ar? Corrija agora.
+
+---
+
+# Mitigando riscos #1
+
+### Autenticação
+
+> "Autenticação é o processo que verifica se o indivíduo, entidade ou aplicação informa que é quem pretende ser." *OWASP*
+
+---
+
+## Estudo de caso - Autenticação via Token de sessão
+
+### Dicas em geral
+
+* O token de sessão deve ser transitado somente pelos Headers da requisição e em protocolos seguros.
+  * A utilização de https é obrigatória.
+  * Utilize apenas o header Authorization ou cookies para trafegar o token de sessão. Nunca na URL.
+* Ao receber o token de sessão na api, valide:
+  * Se o token de sessão não está expirado.
+  * Se o token de sessão é válido, ou seja, pertence de fato a um usuário logado no momento.
+
+---
+
+## [ASVS (Application Security Verification Standard)](https://github.com/OWASP/ASVS/tree/v4.0.3)
+Acesse o artigo completo [aqui](/ASV_document.pdf)
+
+---
+
+## [OWASP Cheat Sheet](https://github.com/OWASP/CheatSheetSeries)
+
+### [Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
+
+---
+
+> Se há apenas um processo de autenticação, o atacante tem poucos passos a percorrer para ter acesso aos dados do servidor que revelem uma porta de entrada de alto risco para a empresa.
+> 
+> É sempre bom ficar de olho nas requisições e os passos que levam o usuário a cada uma delas.
+
+---
+
+> Quando a requisição tiver IDs, garantir que o usuário logado possa realizar a operação que deseja nos ids que ele informa (ex: se ele quer atualizar um endereço, se ele informar qualquer id que não seja um endereço dele, deve retornar erro).
+>
+> Sempre devemos validar os ids da requisição.
+
+---
+
+> Quando o usuário tentar acessar uma funcionalidade, devemos verificar se ele possui permissão para acessar.
+>
+> Devemos inclusive descrever o processo de como a aplicação garante isto.
+
+---
+
+### [Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)
+
+---
+
+### [Security best practices for Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/security-best-practices.html)
+Acesse o guia de usuário para serviço de armazenamento da Amazon [aqui](/amazon_simple_storage_service.pdf)
+
+---
+
+### [Security Misconfiguration](https://owasp.org/Top10/A05_2021-Security_Misconfiguration/)
+
+---
+
+> O melhor a se fazer em bucket lists é conceder acesso apenas para caminhos de URL específicas e exclusivas, nunca torná-las públicas de forma alguma.
+>
+> Esse é um dos erros de segurança mais cometidos por empresas.
+
+---
+
+> Os atacantes não olham somente o sistema em produção; se eles encontrarem o sistema de desenvolvimento, este pode ter dados de backup de produção. Então se um ambiente está público para a internet, ele deve ter os mesmos cuidados de segurança de um ambiente de produção.
+>
+> Qualquer ambiente que está exposto para a internet pode estar vulnerável.
+
+---
+
+* Nunca armazene senhas em banco de dados em forma de texto aberto ou algoritmo de criptografia reversível (recomendável utilizar [algoritmos de hash](Scripts%20úteis%20de%20exemplo/unreversible_encrypted_password.go)).
+
+---
+
+### [PCI DSS](https://www.pcisecuritystandards.org/document_library/)
+
+---
+
+* Atenção aos problemas na gestão de conhecimento da chave:
+  * Pessoas com acesso à senhas do banco de dados não podem mais ter acesso à senha utilizada. Alterar todo o sistema de senhas se possível
+  * Danos ou comprometimentos em um computador específico devem ser motivo para a reestruturação completa do computador.
+
+---
+
+* Separe e restrinja os tipos de acesso.
+  * Cada membro deve ter uma credencial para poder acessar dados do sistema.
+  * Sempre forneça o mínimo de acesso possível a diversos bancos para novos funcionários.
+  * Utilize dados falsos para testes.
+  * Criptografar o armazenamento de dados.
+---
+
+> Qualquer dado sensível e/ou pessoal deve ser removido ou completamente anonimizado, ou seja, não deve ser possível identificar dados de pessoas reais.
+>
+> Quando levamos dados de produção para outros ambientes, ele não deve conter dados de pessoas.
+
+---
+
+### [Protect Data Everywhere](https://owasp.org/www-project-proactive-controls/v3/en/c8-protect-data-everywhere)
+
+---
+
+### [User Privacy Protection Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/User_Privacy_Protection_Cheat_Sheet.html)
+
+---
+
+### [DATA PROTECTION](https://owaspsamm.org/model/operations/operational-management/stream-a/)
+
+---
+
