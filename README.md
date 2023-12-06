@@ -316,3 +316,34 @@ Acesse o guia de usuário para serviço de armazenamento da Amazon [aqui](/amazo
 
 ---
 
+## JSON Web Tokens 
+
+Uma ferramenta que hackers podem utilizar para recolher informações a partir de documentos log.
+
+Dependendo de como for a padronização de segurança e o gerenciamento de logs, é possível que qualquer pessoa com acesso aos logs possa ter acesso à informações sigilosas.
+
+JSON Web Tokens é uma ferramenta com grande potencial de perigo se usada por hackers criminosos. No entanto, é também uma excelente ferramenta como parte da conduta de hackers éticos e equipes de QA.
+
+---
+
+# Conclusão
+
+Parabéns pela conclusão do curso de Modelagem de ameaças: identifique riscos na concepção do software!
+
+Neste curso, aprendemos a identificar possíveis problemas de segurança na concepção de software, antes dele ser construído.
+
+O que aprendemos?
+
+* Desenhamos o nosso sistema para termos visibilidade do que existe.
+* Entendemos as conexões e como os componentes de software se comunicam.
+* Vimos quais são os dados que temos e o que pode ser interessante para um atacante.
+* Analisar criticamente as configurações dos nossos serviços.
+
+Se você aplicar estes principais conceitos que aprendemos no seu cotidiano de desenvolvimento, com certeza construirá sistemas mais seguros.
+
+Áreas que você também pode conhecer:
+
+* Segurança Ofensiva (Red Team)
+* Operações de Segurança (Blue Team e SOC)
+
+Espero que você tenha conseguido realizar todas as atividades para colocar em prática o que aprendeu. Caso fique com dúvidas, pode postar no fórum que a comunidade vai te ajudar!
