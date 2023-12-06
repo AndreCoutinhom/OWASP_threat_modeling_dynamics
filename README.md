@@ -316,6 +316,138 @@ Acesse o guia de usuário para serviço de armazenamento da Amazon [aqui](/amazo
 
 ---
 
+### XSS (Cross-Site Scripting)
+
+Quando capturamos as informações que o usuário envia e renderizamos para outro usuário sem restrição.
+
+---
+
+### [How to prevent XSS](https://portswigger.net/web-security/cross-site-scripting/preventing)
+
+---
+
+### [Cross Site Scripting Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)
+
+---
+
+[Este script](Scripts%20úteis%20de%20exemplo/text_substitution.js) faz com que os valores não serão renderizados como um script. Uma tag script vai virar outro tipo de tag ou escrita. E vão bloquear a maioria dos ataques, isso porque o browser vai escrever na tela, mas não vai renderizar como um script.
+
+---
+
+### SQL Injection
+
+Vulnerabilidade em que o atacante envia dentro de um campo da requisição um comando SQL, incluindo-o no comando SQL fonte.
+
+> Concatenar inputs do usuário direto em instruções sql nos leva à vulnerabilidade de SQL Injection.
+
+Para evitar, utilizar [SQL Parameters](Scripts%20úteis%20de%20exemplo/params_model.sql).
+
+---
+
+### Null Byte
+
+Um ataque que consiste em colocar no final do nome do arquivo um comando que pode alterar o tipo de arquivo recebido dependedendo da tecnologia utilizada pela empresa.
+
+Para evitar, fazer uma validação de tipos de arquivo pelo conteúdo. Usse [este código](Scripts%20úteis%20de%20exemplo/file_validation.py) como modelo.
+
+---
+
+Para saber quais sãos os parâmetros de conteúdo para cada tipo de arquivo acesse o link abaixo:
+
+### [File Magic Bytes](https://en.wikipedia.org/wiki/List_of_file_signatures)
+
+---
+
+### SSRF (Server Side Request Forgery)
+
+Forma do atacante enviar uma URL com o protocolo `file://`, o que o concederá acesso a parte dos arquivos internos da empresa. 
+
+Para evitar é bom evitar a possibilidade do uso de URLs para envio de conteúdo. Caso a primeira opção não seja possível, restringir o envio de URLs para o protocolo HTTP ou HTTPS.
+
+---
+
+### [Input Validation Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html)
+
+---
+
+### [Validate All Inputs](https://owasp.org/www-project-proactive-controls/v3/en/c5-validate-inputs)
+
+---
+
+### [Improper Data Validation](https://owasp.org/www-community/vulnerabilities/Improper_Data_Validation)
+
+---
+
+### [Improper Input Validation](https://cwe.mitre.org/data/definitions/20.html)
+
+---
+
+### Dica de conduta
+> Apenas informações para os usuários comuns devem ser entregues, não de sistema. Devemos gerenciar estas mensagens internamente.
+
+---
+
+### [HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+
+---
+
+### [Improper Error Handling](https://owasp.org/www-community/Improper_Error_Handling)
+
+---
+
+### [Error Handling Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Error_Handling_Cheat_Sheet.html)
+
+---
+
+### [Handle all Errors and Exceptions](https://owasp.org/www-project-proactive-controls/v3/en/c10-errors-exceptions)
+
+---
+
+* Devemos ter total controle sobre a sessão e o usuário do lado da API.
+
+---
+
+* Não devemos punir os usuários originais por ataques realizados por criminosos.
+
+---
+
+### [Session Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html)
+
+---
+
+### [Improper Session Handling](https://owasp.org/www-project-mobile-top-10/2014-risks/m9-improper-session-handling)
+
+---
+
+### Logs
+Método pelo qual podemos registrar toda a atividade dos usuários.
+
+---
+
+### Nunca logar:
+
+* Dados de contato, como e-mail e telefone.
+* Dados sigilosos, como senhas e tokens de sessão.
+* Informações pessoais e sensíveis, como dados cadastrais.
+
+---
+
+### [Logging Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
+
+---
+
+### [Security Logging and Monitoring Failures](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/)
+
+---
+
+### [Insufficient Logging & Monitoring](https://owasp.org/www-project-top-ten/2017/A10_2017-Insufficient_Logging%2526Monitoring)
+
+---
+
+### [Implement Security Logging and Monitoring](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging)
+
+---
+
 ## JSON Web Tokens 
 
 Uma ferramenta que hackers podem utilizar para recolher informações a partir de documentos log.
