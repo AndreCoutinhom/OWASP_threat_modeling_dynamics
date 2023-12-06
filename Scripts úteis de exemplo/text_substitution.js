@@ -1,3 +1,7 @@
+// Usando a função abaixo é possível bloquear vários ataques XSS
+// O que se recomenda é que caracteres especiais sejam interpretados pelo navegador na forma de outros tipos de tag
+// Dessa forma o script não é renderizado
+
 function escapeHTML(text) {
     // Cria um objeto que mapeia caracteres especiais para suas respectivas entidades HTML
     var map = {
